@@ -1,0 +1,44 @@
+[
+    {
+        "brand": "Dell",
+        "imgage": "https://i.ibb.co/wKWBnYX/Dell.jpg",
+        "slider1": "https://i.ibb.co/YbVGYjW/dell-banner-1.png",
+        "slider2": "https://i.ibb.co/WFPH33p/dell-banner-2.webp",
+        "slider3": "https://i.ibb.co/6PNWmC6/dell-banner-3.jpg"
+    },
+    {
+        "brand": "APPLE",
+        "imgage": "https://i.ibb.co/7p4z4QQ/apple.jpg",
+        "slider1": "https://i.ibb.co/cFK74zF/apple-banner-1.jpg",
+        "slider2": "https://i.ibb.co/X2bkBrj/apple-banner-2.jpg",
+        "slider3": "https://i.ibb.co/Wv5QPm6/apple-banner-3.jpg"
+    },
+    {
+        "brand": "GRADO",
+        "imgage": "https://i.ibb.co/wSwg6wF/android-headphones.jpg",
+        "slider1": "https://i.ibb.co/jHJ0y53/headphone-banner-image-1.webp",
+        "slider2": "https://i.ibb.co/fSfJ79V/headphone-banner-2.webp",
+        "slider3": "https://i.ibb.co/JtDqhng/headphone-banner-3.jpg"
+    },
+    {
+        "brand": "SAMSUNG",
+        "imgage": "https://i.ibb.co/BZdw6kF/samsung.jpg",
+        "slider1": "https://i.ibb.co/x10X3W0/samsung-banner-1.jpg",
+        "slider2": "https://i.ibb.co/2gjB7Hg/samsung-banner-2.jpg",
+        "slider3": "https://i.ibb.co/c8Vx9hK/samsung-banner-3.jpg"
+    },
+    {
+        "brand": "VIVO",
+        "imgage": "https://i.ibb.co/wYSJWvQ/vivo-logo.jpg",
+        "slider1": "https://i.ibb.co/yg934g6/vivo-banner-1.jpg",
+        "slider2": "https://i.ibb.co/W2kDsVW/vivo-banner-2.jpg",
+        "slider3": "https://i.ibb.co/s25v4bW/vivo-banner-3.jpg"
+    },
+    {
+        "brand": "ROLEX",
+        "imgage": "https://i.ibb.co/FB3FdSp/watch.jpg",
+        "slider1": "https://i.ibb.co/VLH7B3g/Rollex-banner-1.jpg",
+        "slider2": "https://i.ibb.co/qB6HGyT/rolex-banner-2.webp",
+        "slider3": "https://i.ibb.co/ZGMTVJd/rolex-banner-3.webp"
+    }
+]

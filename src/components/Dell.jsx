@@ -7,7 +7,7 @@ const Dell = () => {
         <div>
             {
                 product.map(data => <>
-                <img src={data.image} alt="" />
+                    <h2>{data.name}</h2>
                 </>)
             }
         </div>

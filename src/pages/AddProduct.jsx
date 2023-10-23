@@ -15,7 +15,7 @@ const AddProduct = () => {
         console.log(formInfo)
 
 
-        fetch('http://localhost:5000/post', {
+        fetch('https://brand-shop-server-side-cnpkiy6o9-nayems-projects-c6ef106d.vercel.app/post', {
             method: "POST",
             headers: {
                 "content-Type": "application/json",

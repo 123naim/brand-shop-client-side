@@ -17,7 +17,6 @@ const Registration = () => {
         const img = e.target.img.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(name, email, password)
 
         await createUser(email, password)
             .then(result => {

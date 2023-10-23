@@ -43,9 +43,18 @@ const AuthProvider = ({ children }) => {
     const logOut = () => {
         setLoading(true);
         signOut(auth)
-    }
+    };
 
-    const authInfo = { user, createUser, signInUser, googleSignIn, logOut, loading }
+    // home data
+    const [brandData, setBrandData] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:5000/data")
+        .then(res => res.json())
+        .then(data => setBrandData(data))
+    }, [])
+
+    const authInfo = { user, createUser, signInUser, googleSignIn, logOut, loading, brandData }
 
 
     return (

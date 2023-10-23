@@ -13,13 +13,15 @@ import AuthProvider from './Provider/AuthProvider';
 import Registration from './pages/Registration';
 import SignIn from './pages/SignIn';
 import PrivateRoute from './Routes/Routes';
-import Dell from './components/Dell';
-import Iphone from './components/Iphone';
-import Headphone from './components/Headphone';
-import Samsung from './components/Samsung';
-import Vivo from './components/Vivo';
+// import Dell from './components/Dell';
+// import Iphone from './components/Iphone';
+// import Headphone from './components/Headphone';
+// import Samsung from './components/Samsung';
+// import Vivo from './components/Vivo';
 import Rolex from './components/Rolex';
 import AddToCart from './pages/AddToCart';
+import RolexDetails from './components/RolexDetails';
+import Update from './components/Update';
 
 
 const router = createBrowserRouter([
@@ -30,6 +32,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("http://localhost:5000/data")
       },
       {
         path: "/addProduct",
@@ -47,35 +50,46 @@ const router = createBrowserRouter([
         path: "/signIn",
         element: <SignIn></SignIn>
       },
+      // {
+      //   path: "/brandProduct/:id",
+      //   element: <Dell></Dell>,
+      //   loader: () => fetch('https://brand-shop-server-side-cnpkiy6o9-nayems-projects-c6ef106d.vercel.app/post')
+      // },
+      // {
+      //   path: "/iphone",
+      //   element: <Iphone></Iphone>,
+      //   loader: () => fetch('https://brand-shop-server-side-cnpkiy6o9-nayems-projects-c6ef106d.vercel.app/post')
+      // },
+      // {
+      //   path: "/grado",
+      //   element: <Headphone></Headphone>,
+      //   loader: () => fetch('https://brand-shop-server-side-cnpkiy6o9-nayems-projects-c6ef106d.vercel.app/post')
+      // },
+      // {
+      //   path: "/samsung",
+      //   element: <Samsung></Samsung>,
+      //   loader: () => fetch('https://brand-shop-server-side-bqfs4za7q-nayems-projects-c6ef106d.vercel.app/post')
+      // },
+      // {
+      //   path: "/vivo",
+      //   element: <Vivo></Vivo>,
+      //   loader: () => fetch('https://brand-shop-server-side-bqfs4za7q-nayems-projects-c6ef106d.vercel.app/post')
+      // },
       {
-        path: "/dell",
-        element: <Dell></Dell>,
-        loader: () => fetch('http://localhost:5000/post')
-      },
-      {
-        path: "/iphone",
-        element: <Iphone></Iphone>,
-        loader: () => fetch('http://localhost:5000/post')
-      },
-      {
-        path: "/grado",
-        element: <Headphone></Headphone>,
-        loader: () => fetch('http://localhost:5000/post')
-      },
-      {
-        path: "/samsung",
-        element: <Samsung></Samsung>,
-        loader: () => fetch('http://localhost:5000/post')
-      },
-      {
-        path: "/vivo",
-        element: <Vivo></Vivo>,
-        loader: () => fetch('http://localhost:5000/post')
-      },
-      {
-        path: "/rolex",
+        path: "/brandProduct/:id",
         element: <Rolex></Rolex>,
-        loader: () => fetch('http://localhost:5000/post')
+        loader: () => fetch("http://localhost:5000/data")
+      },
+      {
+        path: "/details/:id",
+        element: <RolexDetails></RolexDetails>,
+        // loader: ({params}) => fetch(`http://localhost:5000/post/${params.id}`)
+        // loader: () => fetch('https://brand-shop-server-side-bqfs4za7q-nayems-projects-c6ef106d.vercel.app/post')
+      },
+      {
+        path: '/update/:id',
+        element: <Update></Update>,
+        loader: ({params}) => fetch(`http://localhost:5000/post/${params.id}`)
       }
     ]
   },

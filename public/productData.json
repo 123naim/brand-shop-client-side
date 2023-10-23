@@ -1,0 +1,80 @@
+[
+    {
+        "name": "vivo y12",
+        "image": "https://i.ibb.co/mhY00k3/product-1.jpg",
+        "brand": "dell",
+        "type": "electronics",
+        "price": "1200",
+        "rating": "5",
+        "description": "this is very good product",
+        "model": "Vostro 14 3400",
+        "processor": "Intel Core i3-1115G4",
+        "ram": "4GB DDR4, Storage: 1TB SATA HDD",
+        "display": "14.0-inch HD (1366 x 768)"
+    },
+    {
+        "name": "vivo y12",
+        "image": "https://i.ibb.co/mhY00k3/product-1.jpg",
+        "brand": "apple",
+        "type": "electronics",
+        "price": "1200",
+        "rating": "5",
+        "description": "this is very good product",
+        "model": "Vostro 14 3400",
+        "processor": "Intel Core i3-1115G4",
+        "ram": "4GB DDR4, Storage: 1TB SATA HDD",
+        "display": "14.0-inch HD (1366 x 768)"
+    },
+    {
+        "name": "vivo y12",
+        "image": "https://i.ibb.co/mhY00k3/product-1.jpg",
+        "brand": "grado",
+        "type": "electronics",
+        "price": "1200",
+        "rating": "5",
+        "description": "this is very good product",
+        "model": "Vostro 14 3400",
+        "processor": "Intel Core i3-1115G4",
+        "ram": "4GB DDR4, Storage: 1TB SATA HDD",
+        "display": "14.0-inch HD (1366 x 768)"
+    },
+    {
+        "name": "vivo y12",
+        "image": "https://i.ibb.co/mhY00k3/product-1.jpg",
+        "brand": "samsung",
+        "type": "electronics",
+        "price": "1200",
+        "rating": "5",
+        "description": "this is very good product",
+        "model": "Vostro 14 3400",
+        "processor": "Intel Core i3-1115G4",
+        "ram": "4GB DDR4, Storage: 1TB SATA HDD",
+        "display": "14.0-inch HD (1366 x 768)"
+    },
+    {
+        "name": "vivo y12",
+        "image": "https://i.ibb.co/mhY00k3/product-1.jpg",
+        "brand": "vivo",
+        "type": "electronics",
+        "price": "1200",
+        "rating": "5",
+        "description": "this is very good product",
+        "model": "Vostro 14 3400",
+        "processor": "Intel Core i3-1115G4",
+        "ram": "4GB DDR4, Storage: 1TB SATA HDD",
+        "display": "14.0-inch HD (1366 x 768)"
+    },
+    {
+        "name": "vivo y12",
+        "image": "https://i.ibb.co/mhY00k3/product-1.jpg",
+        "brand": "rolex",
+        "type": "electronics",
+        "price": "1200",
+        "rating": "5",
+        "description": "this is very good product",
+        "model": "Vostro 14 3400",
+        "processor": "Intel Core i3-1115G4",
+        "ram": "4GB DDR4, Storage: 1TB SATA HDD",
+        "display": "14.0-inch HD (1366 x 768)"
+    }
+]
