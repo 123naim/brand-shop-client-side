@@ -16,7 +16,7 @@ const Home = () => {
 
 
     useEffect(() => {
-        fetch('https://brand-shop-server-side-2uhrds1nf-nayems-projects-c6ef106d.vercel.app/data')
+        fetch('https://brand-shop-server-side-2uen4zsmp-nayems-projects-c6ef106d.vercel.app/data')
             .then(res => res.json())
             .then(data => setBrandData(data))
     }, [])
@@ -24,7 +24,7 @@ const Home = () => {
     console.log(brandData)
 
     useEffect(() => {
-        fetch('/topRatedProduct.json')
+        fetch('http://localhost:5000/topRateProduct')
             .then(res => res.json())
             .then(data => setTopRatedProducts(data))
     }, [])
@@ -100,8 +100,6 @@ const Home = () => {
                             <h2 className=" font-bold mb-3">FAX </h2>
                             <p className="text-gray-700"><a href="#">Hero@gmail.com</a></p>
                         </div>
-
-
                     </div>
                     <div className="bg-teal-200 w-[550px] ml-80 h-[480px] flex flex-col items-center justify-center">
                         <div className="ml-12">

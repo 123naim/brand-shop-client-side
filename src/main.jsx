@@ -17,12 +17,14 @@ import BrandedProducts from './components/BrandedProducts';
 import AddToCart from './pages/AddToCart';
 import ProductDetails from './components/ProductDetails';
 import ProductUpdate from './components/ProductUpdate';
+import ErrorPage from './pages/ErrorPage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -47,7 +49,7 @@ const router = createBrowserRouter([
       {
         path: "/brandProduct/:id",
         element: <BrandedProducts></BrandedProducts>,
-        loader: () => fetch("https://brand-shop-server-side-2uhrds1nf-nayems-projects-c6ef106d.vercel.app/data")
+        loader: () => fetch("https://brand-shop-server-side-2uen4zsmp-nayems-projects-c6ef106d.vercel.app/data")
       },
       {
         path: "/details/:id",
@@ -56,7 +58,7 @@ const router = createBrowserRouter([
       {
         path: '/update/:id',
         element: <PrivateRoute><ProductUpdate></ProductUpdate></PrivateRoute>,
-        loader: ({params}) => fetch(`https://brand-shop-server-side-2uhrds1nf-nayems-projects-c6ef106d.vercel.app/post/${params.id}`)
+        loader: ({params}) => fetch(`https://brand-shop-server-side-2uen4zsmp-nayems-projects-c6ef106d.vercel.app/post/${params.id}`)
       }
     ]
   },

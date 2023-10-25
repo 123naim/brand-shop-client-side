@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 const ProductUpdate = () => {
     const useLoader = useLoaderData()
@@ -28,15 +29,13 @@ el.app/post/${useLoader._id}`, {
             .then(data => {
                 console.log(data);
                 if(data.modifiedCount > 0){
-                    alert('user Updated Successfully')
+                    toast.success('user Updated Successfully')
                 }
             })
     }
 
     return (
         <div>
-            <h2>{useLoader.name}</h2>
-            <img src={useLoader.image} alt="" />
             <div className="bg-base-200 rounded-lg w-5/6 p-8 mt-4 mx-auto">
                 <h2 className="text-3xl font-semibold text-center pb-7">Add Product</h2>
                 <form onSubmit={handleUpdate}>

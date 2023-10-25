@@ -49,7 +49,7 @@ const AuthProvider = ({ children }) => {
     const [brandData, setBrandData] = useState([]);
 
     useEffect(() => {
-        fetch("https://brand-shop-server-side-2uhrds1nf-nayems-projects-c6ef106d.vercel.app/data")
+        fetch("https://brand-shop-server-side-2uen4zsmp-nayems-projects-c6ef106d.vercel.app/data")
         .then(res => res.json())
         .then(data => setBrandData(data))
     }, [])
