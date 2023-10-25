@@ -2,14 +2,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 
-const RolexDetails = () => {
+const ProductDetails = () => {
     const [cardDetails, setCardDetails] = useState({});
-    console.log(cardDetails)
     const [loading, setLoading] = useState(true);
     const { id } = useParams()
-    console.log(id)
     useEffect(() => {
-        fetch(`http://localhost:5000/post/${id}`)
+        fetch(`https://brand-shop-server-side-2uhrds1nf-nayems-projects-c6ef106d.vercel.app/post/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -36,7 +34,7 @@ const RolexDetails = () => {
         const formInfo = { name, image, brand, type, price, rating, description, model, processor, ram, display };
         console.log(formInfo)
 
-        fetch('http://localhost:5000/cart', {
+        fetch('https://brand-shop-server-side-2uhrds1nf-nayems-projects-c6ef106d.vercel.app/cart', {
             method: "POST",
             headers: {
                 "content-Type": "application/json",
@@ -65,4 +63,4 @@ const RolexDetails = () => {
     );
 };
 
-export default RolexDetails;
+export default ProductDetails;

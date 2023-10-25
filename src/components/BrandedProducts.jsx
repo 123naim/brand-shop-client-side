@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
-import Raing from "./Raing";
-// import { AuthContext } from "../Provider/AuthProvider";
+import Rating from "./Rating";
 
-const Rolex = () => {
-    // const {brandData} = useContext(AuthContext);
+const BrandedProducts = () => {
     const brandUserData = useLoaderData();
     const { id } = useParams();
     const userdata = brandUserData.find(data => data._id === id);
@@ -12,7 +10,7 @@ const Rolex = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const url = "http://localhost:5000/post"
+        const url = "https://brand-shop-server-side-2uhrds1nf-nayems-projects-c6ef106d.vercel.app/post"
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -72,7 +70,7 @@ const Rolex = () => {
                                     <div className="flex justify-between items-center pr-1 my-5">
                                         <p>{data.price}</p>
                                         <p>
-                                            <Raing rating={data.rating}></Raing>
+                                            <Rating rating={data.rating}></Rating>
                                         </p>
                                     </div>
                                     <div className="flex justify-between">
@@ -86,25 +84,6 @@ const Rolex = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="border p-3 rounded-lg">
-                            <div>
-                                <img className="rounded-lg w-96 h-60" src={data.image} alt="" />
-                                <div className="my-5">
-                                    <h2 className="text-3xl font-semibold text-gray-700">Name: <span className="text-gray-500 font-medium">{data.name}</span></h2>
-                                    <p className="font-semibold text-2xl text-gray-700">Brand: <span className="text-gray-500 ">{data.brand}</span></p>
-                                    <p className="font-semibold text-2xl text-gray-700">Type: <span className="text-gray-500 ">{data.type}</span></p>
-                                    <p className="font-semibold text-2xl text-gray-700">Price: <span className="text-gray-500 ">{data.price}</span></p>
-                                    <p className="font-semibold text-2xl text-gray-700">Description: <span className="text-gray-500 ">{data.description.slice(0, 15)}....</span></p>
-                                    <p className="font-semibold text-2xl text-gray-700">Rating: <span className="text-gray-500">{data.rating}</span></p>
-                                </div>
-                            </div>
-                            <div className="flex flex-row gap-4 mt-4">
-                                <Link to={`/details/${data._id}`}>
-                                    <button className="rounded-lg py-2 px-3 bg-pink-500 text-white">Detials</button>
-                                </Link>
-                                <button className="rounded-lg py-2 px-3 bg-pink-500 text-white">Update</button>
-                            </div>
-                        </div> */}
                     </>)
                 }
             </div>
@@ -112,4 +91,4 @@ const Rolex = () => {
     );
 };
 
-export default Rolex;
+export default BrandedProducts;

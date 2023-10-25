@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 
-const Update = () => {
+const ProductUpdate = () => {
     const useLoader = useLoaderData()
     
     const handleUpdate = e => {
@@ -16,7 +16,8 @@ const Update = () => {
         const formInfo = { name, image, brand, type, price, rating, description }
         console.log(formInfo);
 
-        fetch(`http://localhost:5000/post/${useLoader._id}`, {
+        fetch(`https://brand-shop-server-side-2uhrds1nf-nayems-projects-c6ef106d.verc
+el.app/post/${useLoader._id}`, {
             method: "PUT",
             headers: {
                 "content-Type": "application/json",
@@ -92,4 +93,4 @@ const Update = () => {
     );
 };
 
-export default Update;
+export default ProductUpdate;

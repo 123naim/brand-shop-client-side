@@ -13,15 +13,10 @@ import AuthProvider from './Provider/AuthProvider';
 import Registration from './pages/Registration';
 import SignIn from './pages/SignIn';
 import PrivateRoute from './Routes/Routes';
-// import Dell from './components/Dell';
-// import Iphone from './components/Iphone';
-// import Headphone from './components/Headphone';
-// import Samsung from './components/Samsung';
-// import Vivo from './components/Vivo';
-import Rolex from './components/Rolex';
+import BrandedProducts from './components/BrandedProducts';
 import AddToCart from './pages/AddToCart';
-import RolexDetails from './components/RolexDetails';
-import Update from './components/Update';
+import ProductDetails from './components/ProductDetails';
+import ProductUpdate from './components/ProductUpdate';
 
 
 const router = createBrowserRouter([
@@ -32,7 +27,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/data")
+        loader: () => fetch("https://brand-shop-server-side-2uhrds1nf-nayems-projects-c6ef106d.vercel.app/data")
       },
       {
         path: "/addProduct",
@@ -50,46 +45,19 @@ const router = createBrowserRouter([
         path: "/signIn",
         element: <SignIn></SignIn>
       },
-      // {
-      //   path: "/brandProduct/:id",
-      //   element: <Dell></Dell>,
-      //   loader: () => fetch('https://brand-shop-server-side-cnpkiy6o9-nayems-projects-c6ef106d.vercel.app/post')
-      // },
-      // {
-      //   path: "/iphone",
-      //   element: <Iphone></Iphone>,
-      //   loader: () => fetch('https://brand-shop-server-side-cnpkiy6o9-nayems-projects-c6ef106d.vercel.app/post')
-      // },
-      // {
-      //   path: "/grado",
-      //   element: <Headphone></Headphone>,
-      //   loader: () => fetch('https://brand-shop-server-side-cnpkiy6o9-nayems-projects-c6ef106d.vercel.app/post')
-      // },
-      // {
-      //   path: "/samsung",
-      //   element: <Samsung></Samsung>,
-      //   loader: () => fetch('https://brand-shop-server-side-bqfs4za7q-nayems-projects-c6ef106d.vercel.app/post')
-      // },
-      // {
-      //   path: "/vivo",
-      //   element: <Vivo></Vivo>,
-      //   loader: () => fetch('https://brand-shop-server-side-bqfs4za7q-nayems-projects-c6ef106d.vercel.app/post')
-      // },
       {
         path: "/brandProduct/:id",
-        element: <Rolex></Rolex>,
-        loader: () => fetch("http://localhost:5000/data")
+        element: <BrandedProducts></BrandedProducts>,
+        loader: () => fetch("https://brand-shop-server-side-2uhrds1nf-nayems-projects-c6ef106d.vercel.app/data")
       },
       {
         path: "/details/:id",
-        element: <RolexDetails></RolexDetails>,
-        // loader: ({params}) => fetch(`http://localhost:5000/post/${params.id}`)
-        // loader: () => fetch('https://brand-shop-server-side-bqfs4za7q-nayems-projects-c6ef106d.vercel.app/post')
+        element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
       },
       {
         path: '/update/:id',
-        element: <Update></Update>,
-        loader: ({params}) => fetch(`http://localhost:5000/post/${params.id}`)
+        element: <PrivateRoute><ProductUpdate></ProductUpdate></PrivateRoute>,
+        loader: ({params}) => fetch(`https://brand-shop-server-side-2uhrds1nf-nayems-projects-c6ef106d.vercel.app/post/${params.id}`)
       }
     ]
   },
@@ -100,3 +68,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <AuthProvider><RouterProvider router={router} /></AuthProvider>
   </React.StrictMode>,
 )
+
+

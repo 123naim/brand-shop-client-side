@@ -1,5 +1,5 @@
 
-const Raing = ({ rating }) => {
+const Rating = ({ rating }) => {
     const rat = Number(rating)
     const yellowStars = rat;
     const grayStars = 5 - rat;
@@ -19,4 +19,4 @@ const Raing = ({ rating }) => {
     );
 };
 
-export default Raing;
+export default Rating;

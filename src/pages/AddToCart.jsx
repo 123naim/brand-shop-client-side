@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 const AddToCart = () => {
     const [addData, setAddData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/cart')
+        fetch('https://brand-shop-server-side-2uhrds1nf-nayems-projects-c6ef106d.vercel.app/cart')
         .then(res => res.json())
         .then(data => setAddData(data))
     }, [])
     const handleDelete = _id => {
         console.log(_id)
-        fetch(`http://localhost:5000/cart/${_id}`, {
+        fetch(`https://brand-shop-server-side-2uhrds1nf-nayems-projects-c6ef106d.vercel.app/cart/${_id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())
