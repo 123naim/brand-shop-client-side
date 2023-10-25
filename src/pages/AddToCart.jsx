@@ -19,7 +19,7 @@ const AddToCart = () => {
             .then(data => {
                 console.log(data)
                 if (data.deletedCount > 0) {
-                    toast.success('user Updated Successfully')
+                    toast.success('user Delete Successfully')
                     const remaining = addData.filter(user => user._id !== _id);
                     setAddData(remaining)
                 }

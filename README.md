@@ -1,6 +1,6 @@
 
 ** Website Name: Brand Shop
-- Live link: <a>https://corporate-events-ad9c0.web.app</a>
+- Live link: <a>https://brand-shop-client-side.web.app</a>
 
 
 ** My Website Featured:- 
