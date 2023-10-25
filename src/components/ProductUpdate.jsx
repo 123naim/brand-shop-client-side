@@ -17,8 +17,7 @@ const ProductUpdate = () => {
         const formInfo = { name, image, brand, type, price, rating, description }
         console.log(formInfo);
 
-        fetch(`https://brand-shop-server-side-2uhrds1nf-nayems-projects-c6ef106d.verc
-el.app/post/${useLoader._id}`, {
+        fetch(`https://brand-shop-server-side-65129y5rj-nayems-projects-c6ef106d.vercel.app/post/${useLoader._id}`, {
             method: "PUT",
             headers: {
                 "content-Type": "application/json",
@@ -80,7 +79,7 @@ el.app/post/${useLoader._id}`, {
                             <label className="label -mt-3">
                                 <span className="label-text">Rating</span>
                             </label>
-                            <input type="text" placeholder="Product Rating" className=" py-2 px-3 border border-gray-300 focus:border-gray-500 focus:border-2 focus:outline-none rounded-lg" name="rating" required defaultValue={useLoader.rating} />
+                            <input type="text" placeholder="Product Rating" className=" py-2 px-3 border w-[255px] md:w-full border-gray-300 focus:border-gray-500 focus:border-2 focus:outline-none rounded-lg" name="rating" required defaultValue={useLoader.rating} />
                         </div>
                     </div>
                     <div>

@@ -49,7 +49,7 @@ const router = createBrowserRouter([
       {
         path: "/brandProduct/:id",
         element: <BrandedProducts></BrandedProducts>,
-        loader: () => fetch("https://brand-shop-server-side-2uen4zsmp-nayems-projects-c6ef106d.vercel.app/data")
+        loader: () => fetch("https://brand-shop-server-side-65129y5rj-nayems-projects-c6ef106d.vercel.app/data")
       },
       {
         path: "/details/:id",
@@ -58,7 +58,7 @@ const router = createBrowserRouter([
       {
         path: '/update/:id',
         element: <PrivateRoute><ProductUpdate></ProductUpdate></PrivateRoute>,
-        loader: ({params}) => fetch(`https://brand-shop-server-side-2uen4zsmp-nayems-projects-c6ef106d.vercel.app/post/${params.id}`)
+        loader: ({params}) => fetch(`https://brand-shop-server-side-65129y5rj-nayems-projects-c6ef106d.vercel.app/post/${params.id}`)
       }
     ]
   },

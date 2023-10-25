@@ -12,7 +12,7 @@ const BrandedProducts = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const url = "https://brand-shop-server-side-2uen4zsmp-nayems-projects-c6ef106d.vercel.app/post"
+        const url = "https://brand-shop-server-side-65129y5rj-nayems-projects-c6ef106d.vercel.app/post"
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -33,21 +33,21 @@ const BrandedProducts = () => {
             <div>
                 <div className="carousel w-full rounded-b-lg -mt-2">
                     <div id="slide1" className="carousel-item relative w-full">
-                        <img src={userdata.slider2} className="w-full h-[550px]" />
+                        <img src={userdata.slider2} className="w-full h-[250px] md:h-[550px]" />
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                             <a href="#slide3" className="btn btn-circle">❮</a>
                             <a href="#slide2" className="btn btn-circle">❯</a>
                         </div>
                     </div>
                     <div id="slide2" className="carousel-item relative w-full">
-                        <img src={userdata.slider3} className="w-full h-[550px]" />
+                        <img src={userdata.slider3} className="w-full h-[250px] md:h-[550px]" />
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                             <a href="#slide1" className="btn btn-circle">❮</a>
                             <a href="#slide3" className="btn btn-circle">❯</a>
                         </div>
                     </div>
                     <div id="slide3" className="carousel-item relative w-full">
-                        <img src={userdata.slider1} className="w-full h-[550px]" />
+                        <img src={userdata.slider1} className="w-full h-[250px] md:h-[550px]" />
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                             <a href="#slide2" className="btn btn-circle">❮</a>
                             <a href="#slide1" className="btn btn-circle">❯</a>
@@ -57,7 +57,7 @@ const BrandedProducts = () => {
             </div>
             <div>
                 <h2 className="text-4xl font-bold text-black text-center mt-16">Our Product</h2>
-                <div className="my-8 grid grid-cols-4 gap-8">
+                <div className="my-8 grid grid-cols-1 ml-12 md:ml-0 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {
                         cardDetails.map(data => <>
                             <div>

@@ -53,8 +53,21 @@ const AddProduct = () => {
                         <label className="label -mt-3">
                             <span className="label-text">Brand Name</span>
                         </label>
-                        <input type="text" placeholder="Brand Name" className=" py-2 px-3 border border-gray-300 focus:border-gray-500 focus:border-2 focus:outline-none rounded-lg" name="brand" required />
+                        <input type="text" placeholder="Brand Name" className="py-2 px-3 border border-gray-300 focus:border-gray-500 focus:border-2 focus:outline-none rounded-lg" list="listOption" name="brand" required />
+                        <datalist id="listOption">
+                            <option value="dell">dell</option>
+                            <option value="apple">apple</option>
+                            <option value="vivo">vivo</option>
+                            <option value="samsung">samsung</option>
+                            <option value="grado">grado</option>
+                            <option value="rolex">rolex</option>
+                        </datalist>
                     </div>
+
+
+
+
+
                     <div className="form-control">
                         <label className="label -mt-3">
                             <span className="label-text">Product Type Name</span>
@@ -77,7 +90,7 @@ const AddProduct = () => {
                         <label className="label -mt-3">
                             <span className="label-text">Rating</span>
                         </label>
-                        <input type="text" placeholder="Product Rating" className=" py-2 px-3 border border-gray-300 focus:border-gray-500 focus:border-2 focus:outline-none rounded-lg" name="rating" required />
+                        <input type="text" placeholder="Product Rating" className=" py-2 px-3 border border-gray-300 w-[255px] md:w-full focus:border-gray-500 focus:border-2 focus:outline-none rounded-lg" name="rating" required />
                     </div>
                 </div>
                 <div>

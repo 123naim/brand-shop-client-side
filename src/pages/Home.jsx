@@ -16,7 +16,7 @@ const Home = () => {
 
 
     useEffect(() => {
-        fetch('https://brand-shop-server-side-2uen4zsmp-nayems-projects-c6ef106d.vercel.app/data')
+        fetch('https://brand-shop-server-side-65129y5rj-nayems-projects-c6ef106d.vercel.app/data')
             .then(res => res.json())
             .then(data => setBrandData(data))
     }, [])
@@ -24,7 +24,7 @@ const Home = () => {
     console.log(brandData)
 
     useEffect(() => {
-        fetch('http://localhost:5000/topRateProduct')
+        fetch('https://brand-shop-server-side-65129y5rj-nayems-projects-c6ef106d.vercel.app/topRateProduct')
             .then(res => res.json())
             .then(data => setTopRatedProducts(data))
     }, [])
@@ -78,8 +78,8 @@ const Home = () => {
             </div>
             <div className="my-16 text-center">
                 <h2 className="text-center text-5xl font-semibold text-gray-700">Contact Us</h2>
-                <div className="flex relative items-center justify-around mt-10">
-                    <div className="grid grid-cols-2 gap-4 absolute top-6 left-40">
+                <div className="flex flex-col md:flex-row md:relative items-center justify-around mt-10">
+                    <div className="grid grid-cols-2 gap-4 md:absolute top-6 left-40">
                         <div className="bg-white w-48 h-56 flex flex-col justify-center items-center p-4">
                             <MdLocationOn className="text-6xl font-blact text-teal-400" />
                             <h2 className=" font-bold my-3">OUR MAIN OFFICE </h2>
@@ -101,13 +101,13 @@ const Home = () => {
                             <p className="text-gray-700"><a href="#">Hero@gmail.com</a></p>
                         </div>
                     </div>
-                    <div className="bg-teal-200 w-[550px] ml-80 h-[480px] flex flex-col items-center justify-center">
-                        <div className="ml-12">
+                    <div className="bg-teal-200 w-full md:w-[550px] md:ml-80 h-[480px] flex flex-col items-center justify-center mt-8 md:mt-0">
+                        <div className="md:ml-12">
                             <h2 className="text-4xl font-bold text-black">Contact Us</h2>
                             <div>
-                                <input className="p-2 pl-4 w-96 mt-8" type="text" placeholder="Enter Your Name" />
-                                <input className="p-2 pl-4 w-96 mt-6" type="text" placeholder="Enter Your Email Address" />
-                                <input className="py-10 pl-4 w-96 mt-6" type="textarea"  />
+                                <input className="p-2 pl-4 w-[255px] md:w-96 mt-8" type="text" placeholder="Enter Your Name" />
+                                <input className="p-2 pl-4 w-[255px] md:w-96 mt-6" type="text" placeholder="Enter Your Email Address" />
+                                <input className="py-10 pl-4 w-[255px] md:w-96 mt-6" type="textarea"  />
                             </div>
                         </div>
                     </div>

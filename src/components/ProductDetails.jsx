@@ -9,7 +9,7 @@ const ProductDetails = () => {
     const [loading, setLoading] = useState(true);
     const { id } = useParams()
     useEffect(() => {
-        fetch(`https://brand-shop-server-side-2uen4zsmp-nayems-projects-c6ef106d.vercel.app/post/${id}`)
+        fetch(`https://brand-shop-server-side-65129y5rj-nayems-projects-c6ef106d.vercel.app/post/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -36,7 +36,7 @@ const ProductDetails = () => {
         const formInfo = { name, image, brand, type, price, rating, description, model, processor, ram, display };
         console.log(formInfo)
 
-        fetch('https://brand-shop-server-side-2uen4zsmp-nayems-projects-c6ef106d.vercel.app/cart', {
+        fetch('https://brand-shop-server-side-65129y5rj-nayems-projects-c6ef106d.vercel.app/cart', {
             method: "POST",
             headers: {
                 "content-Type": "application/json",
@@ -60,7 +60,7 @@ const ProductDetails = () => {
     return (
         <div>
             <div>
-                <div className="flex items-center gap-12 bg-white">
+                <div className="flex flex-col md:flex-row items-center gap-12 bg-white pb-8">
                     <img src={cardDetails.image} alt="" />
                     <div>
                         <h2 className="text-3xl font-semibold mb-3">{cardDetails.name}</h2>

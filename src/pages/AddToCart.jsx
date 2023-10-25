@@ -6,13 +6,13 @@ import { toast } from 'react-toastify';
 const AddToCart = () => {
     const [addData, setAddData] = useState([]);
     useEffect(() => {
-        fetch('https://brand-shop-server-side-2uen4zsmp-nayems-projects-c6ef106d.vercel.app/cart')
+        fetch('https://brand-shop-server-side-65129y5rj-nayems-projects-c6ef106d.vercel.app/cart')
             .then(res => res.json())
             .then(data => setAddData(data))
     }, [])
     const handleDelete = _id => {
         console.log(_id)
-        fetch(`https://brand-shop-server-side-2uen4zsmp-nayems-projects-c6ef106d.vercel.app/cart/${_id}`, {
+        fetch(`https://brand-shop-server-side-65129y5rj-nayems-projects-c6ef106d.vercel.app/cart/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -31,9 +31,6 @@ const AddToCart = () => {
         <div>
             <h2></h2>
             <div>
-                {/* {
-                    addData.map(data => <li key={data._id}>{data?.model} <button className="ml-6" onClick={() => handleDelete(data._id)}>Delete</button></li>)
-                } */}
                 {
                     addData.map(data => <p key={data._id}>
                         <div className="flex justify-between items-center border-b-2 py-2">
