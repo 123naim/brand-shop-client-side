@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from 'react-icons/fc';
@@ -9,6 +9,7 @@ import { updateProfile } from "firebase/auth";
 const Registration = () => {
 
     const { createUser, googleSignIn } = useContext(AuthContext)
+    const [registerError, setRegisterError] = useState('');
     const navigate = useNavigate();
 
     const handlesubmit = async (e) => {
@@ -17,6 +18,24 @@ const Registration = () => {
         const img = e.target.img.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
+
+        // reset error
+        setRegisterError(' ');
+
+        if(password.length < 6) {
+            setRegisterError('Password should be at least 6 characters')
+            return
+        }
+
+        else if(!/[A-Z]/.test(password) ){
+            setRegisterError('Plassword should be UpperCase characters')
+            return
+        }
+        else if(!/[!@#$%^&*]/.test(password) ){
+            setRegisterError('Plassword should be LowerCase characters')
+            return
+        }
+        
 
         await createUser(email, password)
             .then(result => {
@@ -39,6 +58,7 @@ const Registration = () => {
             .catch(error => {
                 toast.error('Registration failed. Please try again.');
                 console.error(error)
+                setRegisterError(error.message)
             })
 
     };
@@ -96,6 +116,9 @@ const Registration = () => {
                                     <p>You have an account? <Link className="text-xl mt-1 text-violet-700 hover:link" to="/login"> Login</Link></p>
                                     <p className="font-semibold mt-2 justify-center flex items-center gap-4">Sign In with <span onClick={handleGoogleSignIn} className="text-xl flex items-center font-semibold text-violet-700 hover:link"> <FcGoogle></FcGoogle>oogle</span></p>
                                 </div>
+                                {
+                                    registerError && <p className="text-red-600 mt-3">{registerError}</p>
+                                }
                             </form>
                         </div>
                     </div>
